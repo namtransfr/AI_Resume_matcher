@@ -1,0 +1,71 @@
+<!--DATABASE STRUCTURE SUMMARY
+
+1. TABLE: applicants
+Stores information about job applicants.
+
+Fields:
+- applicant_id : Unique ID of the applicant
+- NAME : Applicant's full name
+- university : University attended
+- skills : List of skills the applicant has
+- experience : Work experience details
+- resume_file : Uploaded resume file path or name
+- created_at : Date when the applicant record was created
+
+
+2. TABLE: jobs
+Stores job position information.
+
+Fields:
+- job_id : Unique ID of the job
+- position_name : Job title or position name
+- job_description : Description of the job role
+- required_skills : Skills required for the position
+- created_at : Date when the job was posted
+
+
+3. TABLE: match_results
+Stores AI matching results between applicants and jobs.
+
+Fields:
+- id : Unique match result ID
+- applicant_id : Reference to the applicant
+- job_id : Reference to the job
+- match_score : Matching score between applicant and job
+- strengths : Applicant strengths based on AI analysis
+- weaknesses : Applicant weaknesses based on AI analysis
+- recommendation : AI recommendation or evaluation
+- created_at : Date when the match result was generated
+
+
+4. TABLE: interviews
+Stores interview scheduling and status information.
+
+Fields:
+- id : Unique interview record ID
+- applicant_id : Reference to the applicant
+- job_id : Reference to the job
+- status : Interview status (e.g. pending, scheduled, completed)
+- created_at : Date when the interview record was created
+
+
+5. TABLE: feedbacks
+Stores feedback related to applicants and job applications.
+
+Fields:
+- id : Unique feedback ID
+- applicant_id : Reference to the applicant
+- job_id : Reference to the job
+- feedback_text : Feedback message or comments
+- created_at : Date when the feedback was created
+
+
+RELATIONSHIPS:
+
+- One applicant can have multiple match_results
+- One applicant can have multiple interviews
+- One applicant can have multiple feedbacks
+
+- One job can be matched with multiple applicants
+- One job can have multiple interviews
+- One job can have multiple feedback entries-->
